@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    <ul>
+        <li th:each="product : ${products}">
+            <strong th:text="${product.name}"></strong> – 
+            <span th:text="${product.price}">0.00</span> €
+        </li>
+    </ul>
+</body>
+</html>
